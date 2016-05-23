@@ -1,0 +1,55 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+
+[core]
+    autocrlf = true
+
+[alias]
+    co = checkout
+    ci = commit
+    cl = clone
+    stat = status
+    st = status
+    br = branch
+
+    # Logs
+    gl  = log -16 --color=always --all --graph --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset%n'
+    gll = log     --color=always --all --graph --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset%n'
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    # lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lola = log --graph --decorate --pretty='format:%C(auto)%h %C(cyan)[%ar]%C(auto)%d %C(yellow)%an %Creset%s' --abbrev-commit --all
+
+    # Dealing with remote repositories
+    fo = fetch origin
+    po = push origin
+
+    # Tools
+    head = rev-list --max-count=1 HEAD
+    ignore= "!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore"
+
+[color "branch"]
+    current = red reverse
+    local = cyan
+    remote = green
+
+[color "diff"]
+    meta = yellow
+    frag = magenta
+    old = red bold
+    new = green
+    plain = white
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+    interactive = auto
+
+[push]
+    default = simple
+
+[rerere]
+    enabled = true
