@@ -1,6 +1,8 @@
 set nocompatible
 filetype off
+
 set number
+set mouse=a
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
