@@ -4,9 +4,6 @@
     branch = auto
     interactive = auto
 
-[core]
-    autocrlf = true
-
 [alias]
     co = checkout
     ci = commit
