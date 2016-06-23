@@ -21,7 +21,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'elzr/vim-json'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'syngan/vim-vimlint'
-
+Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end() 
 
