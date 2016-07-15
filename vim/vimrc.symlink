@@ -25,4 +25,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end() 
 
+map <F5> :NERDTree <CR>
+map <F6> :NERDTreeFocus <CR>
+
 filetype plugin indent on
