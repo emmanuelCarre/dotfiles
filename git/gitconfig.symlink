@@ -15,9 +15,9 @@
     # Logs
     gl  = log -16 --color=always --all --graph --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset%n'
     gll = log     --color=always --all --graph --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset%n'
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    # lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     lola = log --graph --decorate --pretty='format:%C(auto)%h %C(cyan)[%ar]%C(auto)%d %C(yellow)%an %Creset%s' --abbrev-commit --all
+    lol = log --graph --decorate --pretty='format:%C(auto)%h %C(cyan)[%ar]%C(auto)%d %C(yellow)%an %Creset%s' --abbrev-commit
+
 
     # Dealing with remote repositories
     fo = fetch origin
@@ -44,9 +44,14 @@
     changed = green
     untracked = cyan
     interactive = auto
+    branch = yellow
+    nobranch = red
 
 [push]
-    default = simple
+    default = upstream
+
+[pull]
+    rebase = preserve
 
 [rerere]
     enabled = true
