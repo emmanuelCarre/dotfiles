@@ -15,8 +15,8 @@
     # Logs
     gl  = log -16 --color=always --all --graph --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset%n'
     gll = log     --color=always --all --graph --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset%n'
-    lola = log --graph --decorate --pretty='format:%C(auto)%h %C(cyan)[%ar]%C(auto)%d %C(yellow)%an %Creset%s' --abbrev-commit --all
     lol = log --graph --decorate --pretty='format:%C(auto)%h %C(cyan)[%ar]%C(auto)%d %C(yellow)%an %Creset%s' --abbrev-commit
+    lola = log --graph --decorate --pretty='format:%C(auto)%h %C(cyan)[%ar]%C(auto)%d %C(yellow)%an %Creset%s' --abbrev-commit --all
 
 
     # Dealing with remote repositories
