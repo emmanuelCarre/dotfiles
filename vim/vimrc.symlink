@@ -22,10 +22,12 @@ Plugin 'elzr/vim-json'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'syngan/vim-vimlint'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'kien/ctrlp.vim'
 
-call vundle#end() 
+call vundle#end()
 
-map <F5> :NERDTree <CR>
-map <F6> :NERDTreeFocus <CR>
+map <F3> :NERDTree <CR>
+map <F4> :NERDTreeFocus <CR>
+map <C-F> :CtrlP <CR>
 
 filetype plugin indent on
