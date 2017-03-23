@@ -88,8 +88,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gsa="find . -maxdepth 2 -type d -name .git -printf '\n\033[35mfolder:\033[0m %p\n' -exec git --git-dir={} --work-tree={}/.. status \;"
-alias gfa="find . -maxdepth 2 -type d -name .git -printf '\n\033[35mfolder:\033[0m %p\n' -exec git --git-dir={} --work-tree={}/.. fetch origin \;"
+alias gsa="find . -maxdepth 2 -type d -name .git | sed -e \"s/.git//g\" | xargs -ti git --git-dir={}.git --work-tree={} status"
+alias gfa="find . -maxdepth 2 -type d -name .git | sed -e \"s/.git//g\" | xargs -ti git --git-dir={}.git --work-tree={} fetch origin"
 
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
