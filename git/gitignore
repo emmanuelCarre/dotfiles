@@ -1,0 +1,5 @@
+.vagrant/
+*.retry
+.vscode/
+.ansible_vault
+local-config
