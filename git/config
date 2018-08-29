@@ -62,3 +62,6 @@
 
 [core]
     excludesfile = ~/.config/git/gitignore
+[user]
+	name = Emmanuel CARRE
+	email = emmanuelCarre@users.noreply.github.com
