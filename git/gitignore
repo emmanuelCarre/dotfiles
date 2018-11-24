@@ -3,3 +3,5 @@
 .vscode/
 .ansible_vault
 local-config
+
+*.tgz
