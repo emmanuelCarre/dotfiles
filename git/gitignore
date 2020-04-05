@@ -5,3 +5,6 @@
 local-config
 
 *.tgz
+.tool-versions
+*.swp
+

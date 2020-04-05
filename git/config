@@ -62,7 +62,7 @@
 
 [core]
     excludesfile = ~/.config/git/gitignore
-	editor = code --wait
+
 [user]
 	name = Emmanuel CARRE
 	email = emmanuelCarre@users.noreply.github.com

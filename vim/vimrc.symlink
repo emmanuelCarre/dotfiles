@@ -4,6 +4,14 @@ filetype off
 set number
 set mouse=a
 
+set autoindent
+set smartindent
+set tabstop=2
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set shiftround
+
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -24,6 +32,9 @@ Plugin 'syngan/vim-vimlint'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-markdown'
+Plugin 'google/vim-jsonnet'
+Plugin 'google/jsonnet'
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end()
 
