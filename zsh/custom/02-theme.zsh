@@ -1,4 +1,4 @@
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 if [ $TERM != "screen-256color" ]; then
   export TERM=xterm-256color
