@@ -3,6 +3,14 @@ alias kns=kubens
 #alias kctx=kubectx
 
 kctx () {
-  local RESULT=$(find ~/.kube/ -maxdepth 1  -type f -name 'config-*' -exec basename {} \; | sort -h | fzf --height 20 --reverse)
-  export KUBECONFIG=~/.kube/${RESULT}
+  local filter=$1
+  local RESULT=$(find \
+    ~/.config/k3d/ \
+    ~/.kube/ \
+    -maxdepth 2 \
+    -type f \
+    -name '*config.yaml' \
+    | sort --human-numeric-sort \
+    | fzf --height 20 --reverse --exact --query "$filter")
+  export KUBECONFIG=${RESULT}
 }
