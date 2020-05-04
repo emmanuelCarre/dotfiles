@@ -62,7 +62,9 @@
 
 [core]
     excludesfile = ~/.config/git/gitignore
+	  hooksPath = /home/ecarre/.config/git/hooks
 
 [user]
-	name = Emmanuel CARRE
-	email = emmanuelCarre@users.noreply.github.com
+	  name = Emmanuel CARRE
+	  email = emmanuelCarre@users.noreply.github.com
+

@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Configuration example into ~/.gitconfig:
+#
+# [git-server "git@<git url>"]
+#     email = <email>
+
+function backslash_dot {
+  echo "$1" | sed 's/\./\\\./g'
+}
+
+function get_email_from_config {
+  local git_remote=`git remote get-url origin`
+  local git_server=`echo "$git_remote" | awk -F: '{print $1}'`
+  git config --global --get "git-server.${git_server}.email"
+}
+
+REMOTE=`git remote get-url origin`
+EMAIL=`get_email_from_config`
+CURRENT_EMAIL=`git config user.email`
+if [ -n "$EMAIL" ] && [ "$EMAIL" != "$CURRENT_EMAIL" ]; then
+  git config --local user.email "$EMAIL"
+fi
