@@ -5,10 +5,6 @@
 # [git-server "git@<git url>"]
 #     email = <email>
 
-function backslash_dot {
-  echo "$1" | sed 's/\./\\\./g'
-}
-
 function get_email_from_config {
   local git_remote=`git remote get-url origin`
   local git_server=`echo "$git_remote" | awk -F: '{print $1}'`
