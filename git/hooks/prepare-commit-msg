@@ -11,14 +11,11 @@ SHA1=$3
 if [[ -z "$COMMIT_SOURCE" ]]
 then
   ref=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-  if [[ $ref =~ ^.*((DWX|OPS)-[0-9]+).* ]]
+  if [[ $ref =~ ^.*((DWX|OPS|INFRA)-[0-9]+).* ]]
   then
     hint=$(cat "$COMMIT_MSG_FILE")
     ticket="${BASH_REMATCH[1]}"
-    echo "${ticket}: " > "$COMMIT_MSG_FILE"
+    echo "Issue: ${ticket}" > "$COMMIT_MSG_FILE"
     echo "$hint" >> "$COMMIT_MSG_FILE"
   fi
 fi
-AUTHOR_NAME=`git config user.name`
-AUTHOR_EMAIL=`git config user.email`
-echo -e "#\n# Author ${AUTHOR_NAME}<${AUTHOR_EMAIL}>" >> "$COMMIT_MSG_FILE"

@@ -1,6 +1,3 @@
-[include]
-    path = ~/.config/git/local-config
-
 [color]
     diff = auto
     status = auto
@@ -26,6 +23,8 @@
     # Dealing with remote repositories
     fo = fetch origin
     po = push origin
+    fu = fetch upstream
+    pu = push upstream
 
     # Tools
     head = rev-list --max-count=1 HEAD
@@ -55,16 +54,16 @@
     default = upstream
 
 [pull]
-    rebase = preserve
+    rebase = merges
 
 [rerere]
     enabled = true
 
 [core]
     excludesfile = ~/.config/git/gitignore
-	  hooksPath = /home/ecarre/.config/git/hooks
+    hooksPath = /home/ecarre/.config/git/hooks
+	editor = vim
 
 [user]
 	  name = Emmanuel CARRE
-	  email = emmanuelCarre@users.noreply.github.com
 

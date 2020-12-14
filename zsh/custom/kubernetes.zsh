@@ -1,6 +1,5 @@
 alias k=kubectl
 alias kns=kubens
-#alias kctx=kubectx
 
 kctx () {
   local filter=$1
@@ -14,3 +13,6 @@ kctx () {
     | fzf --height 20 --reverse --exact --query "$filter")
   export KUBECONFIG=${RESULT}
 }
+
+source <(kubectl completion zsh)
+complete -F __start_kubectl k
